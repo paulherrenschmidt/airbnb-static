@@ -1,0 +1,20 @@
+seb:
+  image: seb.jpg
+  description: "Charming room in Montmartre"
+  name: "Seb"
+
+anne:
+  image: anne.jpg
+  description: "Room in LONDON"
+  name: "Anne"
+
+  <!-- source/flats/show.html.erb -->
+
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<%= image_tag flat.owner_picture, class: "img-circle" %>
+<p><%= flat.owner_name %></p>
+<h1><%= flat.description %></h1>
+<p><%= flat.city %></p>
